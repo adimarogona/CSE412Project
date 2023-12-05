@@ -1,0 +1,1 @@
+Select allergies FROM "Chart" Where patient_id = {{patientSelector.value}}

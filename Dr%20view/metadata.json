@@ -1,0 +1,11 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "c3f16f58-8ff8-11ee-a2cd-1f2e09c3dc72",
+  "appTemplate": {
+    "preloadedAppJavaScript": "var distanceToScroll = document.body.scrollHeight - window.innerHeight;\nvar speed = 2; \n\nvar scrollInterval = setInterval(function() {\n    window.scrollBy(0, speed);\n    \n    if (window.pageYOffset >= distanceToScroll) {\n        clearInterval(scrollInterval);\n    }\n}, 16);",
+    "shortlink": false,
+    "version": "3.24.0",
+    "experimentalDataTabEnabled": true
+  }
+}

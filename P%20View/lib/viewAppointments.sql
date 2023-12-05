@@ -1,0 +1,1 @@
+select appointment_id, appointment_time from "appointment" where isAvail = 1;

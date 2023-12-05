@@ -1,0 +1,1 @@
+select hospital_id, hospital_name from "hospital"

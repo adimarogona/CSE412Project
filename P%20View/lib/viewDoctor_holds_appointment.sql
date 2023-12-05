@@ -1,0 +1,1 @@
+select appointment_id from "doctor_holds_appointment";

@@ -1,0 +1,1 @@
+UPSERT INTO "Chart" (chart_id, medical_history, prescription, allergies, patient_id) VALUES (1,{{ medicalHistoryInput.value }}, {{ prescriptionInput.value }}, {{ allergiesInput.value }}, {{ patientSelector.value }});

@@ -1,0 +1,1 @@
+SELECT chart_id from "Chart" where patient_id= {{patientSelector.value}}

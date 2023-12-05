@@ -1,0 +1,16 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "f0d3612c-9000-11ee-a4bf-17145abf34c4",
+  "appTemplate": {
+    "appMaxWidth": "1560px",
+    "appThemeId": -1,
+    "experimentalFeatures": {
+      "object": {
+        "sourceControlTemplateDehydration": false
+      }
+    },
+    "version": "3.24.0",
+    "experimentalDataTabEnabled": true
+  }
+}

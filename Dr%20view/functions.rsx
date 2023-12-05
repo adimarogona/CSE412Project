@@ -1,0 +1,135 @@
+<GlobalFunctions>
+  <SqlQueryUnified
+    id="view_Doctors"
+    isMultiplayerEdited={false}
+    query={include("./lib/view_Doctors.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    resourceTypeOverride=""
+    tableName="Doctor"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="viewMedicalHistory"
+    isMultiplayerEdited={false}
+    query={include("./lib/viewMedicalHistory.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="viewPatientIDs"
+    query={include("./lib/viewPatientIDs.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="viewPatientPrescription"
+    query={include("./lib/viewPatientPrescription.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="viewPatientAllergies"
+    query={include("./lib/viewPatientAllergies.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="updateChart"
+    actionType="UPDATE_OR_INSERT_BY"
+    changeset={
+      '[{"key":"medical_history","value":"{{medicalHistoryInput.value}}"},{"key":"prescription","value":"{{prescriptionInput.value}}"},{"key":"allergies","value":"{{allergiesInput.value}}"},{"key":"patient_id","value":"{{patientSelector.value}}"}]'
+    }
+    editorMode="gui"
+    filterBy={
+      '[{"key":"patient_id","value":"{{patientSelector.value}}","operation":"="}]'
+    }
+    query={include("./lib/updateChart.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    runWhenModelUpdates={false}
+    tableName="Chart"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="doctor_edits_chart"
+    actionType="INSERT"
+    changeset={
+      '[{"key":"hospital_id","value":"{{chooseHospital.value}}"},{"key":"patient_id","value":"{{patientSelector.value}}"},{"key":"doctor_id","value":"{{selectDoctor.value}}"},{"key":"chart_id","value":"{{ selectChartID.data.chart_id[0]}}"}]'
+    }
+    editorMode="gui"
+    isMultiplayerEdited={false}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    runWhenModelUpdates={false}
+    tableName="doctor_edits_chart"
+  />
+  <SqlQueryUnified
+    id="selectChartID"
+    query={include("./lib/selectChartID.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="selectHospital"
+    query={include("./lib/selectHospital.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+  <SqlQueryUnified
+    id="offerAppointment"
+    actionType="INSERT"
+    changeset={
+      '[{"key":"hospital_id","value":"{{chooseHospital.value}}"},{"key":"isAvailable","value":"true"},{"key":"doctor_id","value":"{{selectDoctor.value}}"},{"key":"appointment_id","value":"{{createAppointment.data.result[\'0\'].appointment_id}}"},{"key":"isAvaila","value":"1"}]'
+    }
+    editorMode="gui"
+    isMultiplayerEdited={false}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    resourceTypeOverride=""
+    runWhenModelUpdates={false}
+    tableName="doctor_holds_appointment"
+  />
+  <SqlQueryUnified
+    id="createAppointment"
+    actionType="INSERT"
+    changeset={
+      '[{"key":"isAvailable","value":"true"},{"key":"appointment_time","value":"{{dateTime1.value}}"},{"key":"isavail","value":"1"}]'
+    }
+    editorMode="gui"
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    resourceTypeOverride=""
+    runWhenModelUpdates={false}
+    tableName="appointment"
+  />
+  <SqlQueryUnified
+    id="deleteAppointment"
+    actionType="UPDATE_BY"
+    changeset={'[{"key":"isavail","value":"0"}]'}
+    editorMode="gui"
+    filterBy={
+      '[{"key":"appointment_id","value":"{{chooseAppointment.value}}","operation":"="}]'
+    }
+    isMultiplayerEdited={false}
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    runWhenModelUpdates={false}
+    tableName="appointment"
+  />
+  <SqlQueryUnified
+    id="viewAppointments"
+    isMultiplayerEdited={false}
+    query={include("./lib/viewAppointments.sql", "string")}
+    queryRefreshTime="5000"
+    resourceDisplayName="retool_db"
+    resourceName="eb24bed9-a79a-4ec3-a7c0-9dbe211b026b"
+    warningCodes={[]}
+  />
+</GlobalFunctions>

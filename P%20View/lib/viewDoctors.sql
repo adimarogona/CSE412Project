@@ -1,0 +1,1 @@
+select doctor_name, doctor_id from "Doctor" where hospital_id = {{chooseHospital.value}};
