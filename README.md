@@ -6,3 +6,4 @@ Please see sql statements under patient View folder --> lib and doctor view fold
 Group:
 Ariadne Dimarogona
 Geethika Yadlapati
+Weed Batarfi
