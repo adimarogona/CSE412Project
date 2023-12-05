@@ -1,0 +1,5 @@
+appointment_id,patient_id,isAvailable,symptoms
+38,1,t,Cold
+39,1,t,Cold
+47,6,t,
+50,1,t,Tired

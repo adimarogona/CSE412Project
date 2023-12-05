@@ -1,0 +1,6 @@
+chart_id,prescription,medical_history,allergies,patient_id
+1,tablets,blood pressure ,None,1
+2,syrup,cough,,2
+3,tablets,stomach ache,diary,3
+4,dont die,Joint pain and asthma,None,4
+5,Rest,"Coughing, asthma",dust,5

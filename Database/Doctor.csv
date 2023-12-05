@@ -1,0 +1,11 @@
+doctor_id,hospital_id,specialization,doctor_name
+1,1,Cardiology,Vikriti Cool
+2,1,pediatrics,Chloe
+3,2,Dentist,Sia
+4,2,Surgeon,John
+5,3,Surgeon,Julie
+6,3,Cardiology,Smith
+7,1,General Physician,Charles
+9,2,Gynecologists,Tia
+10,2,Orthopedic,Tim
+11,3,Endocrinologist,Will
